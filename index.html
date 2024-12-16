@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyHigherSA.COM - Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #007847, #ffb915, #ff0000, #0000ff);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            padding: 50px 0 20px;
+        }
+
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        main img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        main p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            margin-top: 20px;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer img {
+            width: 25px;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Random image selection
+        const images = ['img/img1', 'img/img2', 'img/img3'];
+        const selectedImage = images[Math.floor(Math.random() * images.length)];
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('randomImage').src = selectedImage;
+        });
+    </script>
+
+    <header>
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Drone Logo">
+        <h1>FlyHigherSA.COM</h1>
+        <p>Our website is under construction and will be launching soon! Stay tuned for breathtaking drone views.</p>
+    </header>
+
+    <main>
+        <img id="randomImage" src="" alt="Random Drone Image">
+        <p>Experience Durban and South Africa from above. Coming Soon!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FlyHigherSA.COM</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+    </footer>
+</body>
+</html>
