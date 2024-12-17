@@ -10,7 +10,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Green background color */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -54,27 +54,16 @@
         <p class="coming-soon">Coming Soon!</p>
         <p>Get ready to experience South Africa's premier drone services.</p>
         <p>Our website is under construction.</p>
+     
     </div>
 
     <script>
-        fetch('/img/')
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(data, 'text/html');
-                const imageFiles = Array.from(htmlDoc.querySelectorAll('a'))
-                    .map(a => a.href)
-                    .filter(href => href.match(/\.(jpg|jpeg|png|gif)$/i));
-                
-                if (imageFiles.length > 0) {
-                    const randomImage = imageFiles[Math.floor(Math.random() * imageFiles.length)];
-                    document.body.style.backgroundImage = `url('${randomImage}')`;
-                    document.body.style.backgroundPosition = 'center';
-                    document.body.style.backgroundRepeat = 'no-repeat';
-                    document.body.style.backgroundSize = 'cover';
-                }
-            })
-            .catch(error => console.error('Error fetching images:', error));
+        const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png' , '/img/img4.png' , '/img/img5.png' , '/img/img6.png' , '/img/img7.png'];
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+        document.body.style.backgroundImage = `url('${randomImage}')`;
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundSize = 'cover';
     </script>
 </body>
 </html>
